@@ -11,7 +11,7 @@ type Achievement struct {
 }
 
 type Rule struct {
-	Name string                 `json:"id"`
+	ID   int                    `json:"id"`
 	Type string                 `json:"type"`
 	Args map[string]interface{} `json:"args"`
 }
