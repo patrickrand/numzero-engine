@@ -1,5 +1,5 @@
 # numzero-engine
 
-`numzero-engine` is the game mechanics engine for the `numzero` gamification-as-a-service platform.
+Game mechanics engine for the `numzero` platform.
 
 
