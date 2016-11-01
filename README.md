@@ -1,5 +1,5 @@
 # numzero-engine
 
-Game mechanics engine for the `numzero` platform.
+A game mechanics engine for the `numzero` platform, written in `Go`.
 
 
