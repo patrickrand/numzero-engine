@@ -1,39 +1,31 @@
 package game
 
+// A Game is the set of achievements that are defined to incentivize a specific behavior or outcome.
+// Although not a requirement, a game is generally associated with a specific practice, topic, or video game.
 type Game struct {
-	ID           int                 `json:"id"`
-	Achievements map[int]Achievement `json:"achievements"`
+	ID           string        `json:"json"`
+	Achievements []Achievement `json:"achievements"`
 }
 
-type Achievement struct {
-	ID     string          `json:"id"` // unique within a given game
-	GameID string          `json:"game_id"`
-	Rules  []Rule          `json:"rules"`
-	Facts  map[string]Fact `json:"facts"` // populated via parsing Rules
+// New returns a new instance of a game.
+func New(id string) *Game {
+	return &Game{ID: id}
 }
 
-func NewAchievement(id, gameID string, rules []Rule) *Achievement {
-	facts := make(map[string]Fact)
-	for _, r := range rules {
-		facts[r.Fact.ID] = r.Fact
+// AddAchievement registers a new achievement for a given game, if an achievement
+// with the same ID does not already exist for that game.
+func (g *Game) AddAchievement(id string, rules []Rule) []Achievement {
+	for _, a := range g.Achievements {
+		if id == a.ID {
+			return g.Achievements
+		}
 	}
 
-	return &Achievement{
+	g.Achievements = append(g.Achievements, Achievement{
 		ID:     id,
-		GameID: gameID,
+		GameID: g.ID,
 		Rules:  rules,
-		Facts:  facts,
-	}
-}
+	})
 
-type Rule struct {
-	ID   int    `json:"id"`
-	Type string `json:"type"` // i.e. "count"
-	Fact Fact   `json:"fact"`
-}
-
-type Fact struct {
-	ID     string                 `json:"id"`
-	Args   map[string]interface{} `json:"args"` // i.e. "total": 8
-	Points int                    `json:"-"`    // ignore for now
+	return g.Achievements
 }
