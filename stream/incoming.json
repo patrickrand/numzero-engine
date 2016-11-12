@@ -1,71 +1,71 @@
 [{
         "id": "newgame1",
-        "type": "new_game",
-        "timestamp": "",
+        "type": "engine.new_game",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
         "game": {}
     },
     {
         "id": "achievementadded1",
-        "type": "achievement_added",
-        "timestamp": "",
+        "type": "engine.achievement_added",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
         "achievement": {}
     },
     {
         "id": "achievementadded2",
-        "type": "achievement_added",
-        "timestamp": "",
+        "type": "engine.achievement_added",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
         "achievement": {}
     },
     {
         "id": "playeractivity1",
-        "type": "player_activity",
-        "timestamp": "",
+        "type": "engine.player_activity",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
         "player_id": "player1",
         "facts": []
     }, {
         "id": "playeractivity2",
-        "type": "player_activity",
-        "timestamp": "",
+        "type": "engine.player_activity",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
         "player_id": "player1",
         "facts": []
     }, {
         "id": "playeractivity3",
-        "type": "player_activity",
-        "timestamp": "",
+        "type": "engine.player_activity",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
         "player_id": "player1",
         "facts": []
     }, {
         "id": "playeractivity4",
-        "type": "player_activity",
-        "timestamp": "",
+        "type": "engine.player_activity",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
         "player_id": "player1",
         "facts": []
     }, {
         "id": "playeractivity5",
-        "type": "player_activity",
-        "timestamp": "",
+        "type": "engine.player_activity",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
         "player_id": "player1",
         "facts": []
     }, {
         "id": "playeractivity6",
-        "type": "player_activity",
-        "timestamp": "",
+        "type": "engine.player_activity",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
         "player_id": "player1",
         "facts": []
     }, {
         "id": "systemerror1",
-        "type": "system_error",
-        "timestamp": "",
-        "error": ""
+        "type": "engine.system_error",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
+        "error": "system error 1 occurred"
     }, {
         "id": "systemerror2",
-        "type": "system_error",
-        "timestamp": "",
-        "error": ""
+        "type": "engine.system_error",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
+        "error": "system error 2 occurred"
     }, {
         "id": "shutdown1",
-        "type": "shutdown",
-        "timestamp": "",
-        "message": ""
+        "type": "engine.shutdown",
+        "timestamp": "2014-06-23T20:29:39.688+01:00",
+        "message": "shutdown initiated due to 1"
     }
 ]

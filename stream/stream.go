@@ -1,7 +1,7 @@
 package stream
 
-import "github.com/patrickrand/numzero-engine/engine"
+import "github.com/patrickrand/numzero-engine/event"
 
 type Streamer interface {
-	Stream() chan engine.Event
+	Stream() chan event.Event
 }
