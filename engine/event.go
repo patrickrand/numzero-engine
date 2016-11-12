@@ -1,7 +1,8 @@
-package event
+package engine
 
 import (
-	"fmt"
+	"io"
+	"log"
 	"time"
 
 	"github.com/patrickrand/numzero-engine/game"
@@ -14,14 +15,9 @@ type Event interface {
 	Payload() interface{}
 }
 
-// String returns the string representation of an event.
-func String(evt Event) string {
-	return fmt.Sprintf("%s:%s", evt.Type(), evt.ID())
-}
-
-// Factory returns the abstracted event for the given type.
+// EventFactory returns the abstracted event for the given type.
 // Forgive me, Rob.
-func Factory(eventType string) Event {
+func EventFactory(eventType string) Event {
 	switch eventType {
 	case "new_game":
 		return &NewGame{}
@@ -100,4 +96,19 @@ type SystemError struct {
 	EventType      string    `json:"type"`
 	EventTimestamp time.Time `json:"timestamp"`
 	Error          string    `json:"error"`
+}
+
+// Log logs an event to output using a standardized format.
+func Log(e Event) {
+	if e == nil {
+		log.Print("[engine] unable to log nil event")
+		return
+	}
+
+	log.Printf("[%s] [%s]", e.Type(), e.ID())
+}
+
+// SetLogOutput sets the output writer that will be logged to.
+func SetLogOutput(w io.Writer) {
+	log.SetOutput(w)
 }

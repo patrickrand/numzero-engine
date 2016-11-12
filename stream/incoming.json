@@ -1,0 +1,71 @@
+[{
+        "id": "newgame1",
+        "type": "new_game",
+        "timestamp": "",
+        "game": {}
+    },
+    {
+        "id": "achievementadded1",
+        "type": "achievement_added",
+        "timestamp": "",
+        "achievement": {}
+    },
+    {
+        "id": "achievementadded2",
+        "type": "achievement_added",
+        "timestamp": "",
+        "achievement": {}
+    },
+    {
+        "id": "playeractivity1",
+        "type": "player_activity",
+        "timestamp": "",
+        "player_id": "player1",
+        "facts": []
+    }, {
+        "id": "playeractivity2",
+        "type": "player_activity",
+        "timestamp": "",
+        "player_id": "player1",
+        "facts": []
+    }, {
+        "id": "playeractivity3",
+        "type": "player_activity",
+        "timestamp": "",
+        "player_id": "player1",
+        "facts": []
+    }, {
+        "id": "playeractivity4",
+        "type": "player_activity",
+        "timestamp": "",
+        "player_id": "player1",
+        "facts": []
+    }, {
+        "id": "playeractivity5",
+        "type": "player_activity",
+        "timestamp": "",
+        "player_id": "player1",
+        "facts": []
+    }, {
+        "id": "playeractivity6",
+        "type": "player_activity",
+        "timestamp": "",
+        "player_id": "player1",
+        "facts": []
+    }, {
+        "id": "systemerror1",
+        "type": "system_error",
+        "timestamp": "",
+        "error": ""
+    }, {
+        "id": "systemerror2",
+        "type": "system_error",
+        "timestamp": "",
+        "error": ""
+    }, {
+        "id": "shutdown1",
+        "type": "shutdown",
+        "timestamp": "",
+        "message": ""
+    }
+]
