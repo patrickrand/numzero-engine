@@ -26,14 +26,14 @@ func NewMockStream(src string) *MockStream {
 	return &mockstream
 }
 
-func (m *MockStream) Stream() chan event.Event {
-	stream := make(chan event.Event)
-	go func(mockstream MockStream, stream chan event.Event) {
+func (m *MockStream) Stream() chan *event.Event {
+	stream := make(chan *event.Event)
+	go func(mockstream MockStream, stream chan *event.Event) {
 		events := []event.Event(mockstream)
 		for range time.Tick(250 * time.Millisecond) {
 			evt := events[rand.Intn(len(events))]
 			evt.Timestamp = time.Now().UTC()
-			stream <- evt
+			stream <- &evt
 		}
 	}(*m, stream)
 	return stream

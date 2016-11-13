@@ -3,7 +3,7 @@ package game
 // A Game is the set of achievements that are defined to incentivize a specific behavior or outcome.
 // Although not a requirement, a game is generally associated with a specific practice, topic, or video game.
 type Game struct {
-	ID           string        `json:"json"`
+	ID           string        `json:"id"`
 	Achievements []Achievement `json:"achievements"`
 }
 
